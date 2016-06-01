@@ -13,6 +13,12 @@ public class AttendanceActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendance); //init
+        GridView gridview = (GridView) findViewById(R.id.gridView);
+        gridview.setAdapter(new ToggleAdapter(this));
 
+    }
+
+    public void foo() {
+        Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_SHORT);
     }
 }
