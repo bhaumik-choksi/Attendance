@@ -14,7 +14,7 @@ import android.widget.ToggleButton;
 /**
  * Created by Bhaumik on 5/31/2016.
  */
-public class ToggleAdapter extends BaseAdapter {
+public class CustomAdapter extends BaseAdapter {
     public String[] filesnames = {
             "Stu 1", "Stu 1", "Stu 1",
             "Stu 2", "Stu 1", "Stu 1",
@@ -24,7 +24,7 @@ public class ToggleAdapter extends BaseAdapter {
     private Context mContext;
 
     // Gets the context so it can be used later
-    public ToggleAdapter(Context c) {
+    public CustomAdapter(Context c) {
         mContext = c;
     }
 
@@ -59,6 +59,8 @@ public class ToggleAdapter extends BaseAdapter {
 
         btn.setText(filesnames[position]);
         // filenames is an array of strings
+        btn.setTextOff(filesnames[position]);
+        btn.setTextOn(filesnames[position]);
         btn.setBackgroundResource(R.drawable.toggle_selector);
         btn.setId(position);
         btn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -66,9 +68,11 @@ public class ToggleAdapter extends BaseAdapter {
                 if (isChecked) {
                     // The toggle is enabled
                     //TODO Student is present
+                    AttendanceActivity.PRESENT++;
                 } else {
                     // The toggle is disabled
                     //TODO Student is absent
+                    AttendanceActivity.PRESENT--;
                 }
             }
         });
