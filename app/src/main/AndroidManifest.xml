@@ -26,7 +26,11 @@
         <activity android:name=".AttendanceActivity" />
         <activity
             android:name=".MainLoginActivity"
-            android:label="@string/title_activity_main_login"></activity>
+            android:label="@string/title_activity_main_login" />
+        <activity
+            android:name=".ClassDetailActivity"
+            android:label="@string/title_activity_class_detail"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

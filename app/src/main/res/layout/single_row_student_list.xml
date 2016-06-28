@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageInStudentList"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="2dp"
+        android:background="@mipmap/yellow" />
+
+    <TextView
+        android:id="@+id/rollNumberInStudentList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/imageInStudentList"
+        android:layout_toEndOf="@+id/imageInStudentList"
+        android:text="Student Roll Number"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/nameInStudentList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageInStudentList"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/rollNumberInStudentList"
+        android:layout_below="@+id/rollNumberInStudentList"
+        android:text="Student Name"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+</RelativeLayout>
