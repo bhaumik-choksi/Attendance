@@ -20,4 +20,5 @@
         completions."
     </string>
     <string name="title_activity_class_detail">ClassDetailActivity</string>
+    <string name="title_activity_view_attendance">ViewAttendanceActivity</string>
 </resources>
